@@ -1,6 +1,18 @@
 import java.util.Scanner;
 
 public class UnitConverter {
+	public static void cupsToTeaspoons(float value) {
+		System.out.println(value + " Cups is " + value * 48 + " Teaspoons");
+	}
+	
+	public static void milesToKilometers(float value){
+		System.out.println(value + " Miles is " + value * 1.609 + " Kilometers");
+	}
+	
+	public static void usToImperialGallons(float value) {
+		System.out.println(value + " US Gallons is " + value/1.201 + " Imperial Gallons");
+	}
+	
 	public static void main(String args[]) {
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
@@ -19,13 +31,13 @@ public class UnitConverter {
 				float value = Float.parseFloat(scanner.nextLine());
 				switch (option) {
 				case 1:
-					System.out.println(value + " Cups is " + value * 48 + " Teaspoons");
+					cupsToTeaspoons(value);
 					break;
 				case 2:
-					System.out.println(value + " Miles is " + value * 1.609 + " Kilometers");
+					milesToKilometers(value);
 					break;
 				case 3:
-					System.out.println(value + " US Gallons is " + value/1.201 + " Imperial Gallons");
+					usToImperialGallons(value);
 					break;
 				}
 			} catch(Exception e) {
